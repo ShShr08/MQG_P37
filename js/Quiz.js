@@ -12,7 +12,7 @@ class Quiz{
 
     update(state){
         database.ref('/').update({
-          gameState: gS
+            gameState: state
         });
     }
 
@@ -34,7 +34,7 @@ class Quiz{
       background("green");
       textSize(40);
       text("Result of Quiz",120,70);
-      Contestant.getContestantInfo();
+      Contestant.gcI()
       if(allContestants!==null){
         var display_position = 260;
         for(var plr in allContestants){
